@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms in html</title>
+  <script>
+    const handleSubmit = (SubmitEvent) => {
+      const form = document.getElementById('registrationForm');
+
+      SubmitEvent.preventDefault();
+      const formData = new FormData(form);
+
+      console.log(Object.fromEntries(formData));
+      alert(JSON.stringify(Object.fromEntries(formData), null, 2));
+    }
+  </script>
+</head>
+<body>
+  <form onsubmit="return handleSubmit(event)" id="registrationForm">
+    <h2>Registration Form</h2>
+
+    <label for="fname">First Name: </label>
+    <input type="text" name="fname">
+    <br>
+    <label for="lname">Last Name: </label>
+    <input type="text" name="lname">
+    <br>
+    <label for="pass">Password: </label>
+    <input type="password" name="pass">
+    <br>
+    <label for="phone">Phone Number: </label>
+    <input type="number" name="phone">
+    <br>
+    Gender: <br>
+    <label>
+      <input type="radio" name="Gender" value="m"> Male
+    </label><br>
+    <label>
+      <input type="radio" name="Gender" value="f"> Female
+    </label><br>
+    <label>
+      <input type="radio" name="Gender" value="o"> Prefer Not to say
+    </label><br>
+
+    <label><input type="checkbox" name="rMail" > Receive emails?</label>
+    <br>
+    Country: 
+    <select name="country">
+      <option selected disabled>select Country</option>
+      <option value="in">India</option>
+      <option value="en">England</option>
+      <option value="USA">USA</option>
+    </select>
+    <br><br>
+    <button type="submit">Submit</button>
+  </form>
+  
+</body>
+</html>
