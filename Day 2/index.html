@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Day 2 Notes</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <nav id="sidebar">
+      <h2>Contents</h2>
+      <a href="#vscode-shortcuts">VS Code Shortcuts</a>
+      <a href="#extensions">Extensions</a>
+      <a href="#tips">Tips</a>
+      <a href="#css">CSS</a>
+      <a href="#flexbox">Flexbox</a>
+      <a href="#grid">CSS Grid</a>
+    </nav>
+
+    <main>
+      <section id="vscode-shortcuts">
+        <h2>VS Code Shortcuts</h2>
+        <ul>
+          <li><code>Ctrl + Shift + P</code> → Command Palette</li>
+          <li><code>Ctrl + B</code> → Hide / Unhide Explorer</li>
+          <li><code>Ctrl + ,</code> → Open Settings</li>
+        </ul>
+      </section>
+
+      <section id="extensions">
+        <h2>Extensions</h2>
+        <ul>
+          <li><strong>Material Icons Theme</strong> → cool icons for files and folders</li>
+          <li><strong>Language IntelliSense & Snippets</strong> → Code suggestions and snippets</li>
+          <li><strong>Prettier</strong> → Used to format code, but VS Code now has built-in formatting (based on Prettier). May not be necessary to install separately to avoid bloating the editor.</li>
+          <li><strong>Better Comments</strong> → Highlight comments using <code>!</code>, <code>TODO</code>, <code>*</code>, <code>?</code></li>
+          <li><strong>Quokka.js</strong> → Real-time outputs and errors while writing JavaScript/TypeScript</li>
+          <li><strong>Live Server</strong> → Run and preview code locally</li>
+          <li><strong>Auto Rename Tag</strong> → Automatically updates closing tags when editing opening tags</li>
+        </ul>
+      </section>
+
+      <section id="tips">
+        <h2>Tips</h2>
+        <ul>
+          <li><code>element.classname</code> → Quickly create an element with a class</li>
+          <li><code>element#id</code> → Quickly create an element with an ID</li>
+        </ul>
+      </section>
+
+      <section id="css">
+        <h2>CSS</h2>
+        <p>Basic CSS syntax:</p>
+        <pre><code>selector {
+    property: value;
+  }</code></pre>
+      </section>
+
+      <section id="flexbox">
+        <h2>Flexbox</h2>
+        <p>Flexbox is a layout model that allows easy alignment and distribution of space among items in a container.</p>
+<pre>
+<code>display: flex;
+justify-content: center | space-between | space-around;
+align-items: center | flex-start | flex-end;</code>
+</pre>
+        <p>Example:</p>
+<pre>
+<code>.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}</code>
+</pre>
+      </section>
+
+      <section id="grid">
+        <h2>CSS Grid</h2>
+        <p>CSS Grid is used for creating 2-dimensional layouts using rows and columns.</p>
+<pre>
+<code>display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 20px;</code>
+</pre>
+        <p>Example:</p>
+<pre>
+<code>.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}</code>
+</pre>
+      </section>
+    </main>
+
+  </body>
+</html>
