@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 2(Multiply/Divide)</title>
+</head>
+<body>
+
+  <h1>JavaScript Assignments</h1>
+
+  <section>
+    <h2>1. Multiply or Divide two numbers</h2>
+    <label for="n1">1st Number&nbsp;&nbsp;:</label>
+    <input type="number" name="n1" id="n1">
+    <br>
+    <label for="n2">2nd Number:</label>
+    <input type="number" name="n2" id="n2">
+    <br>
+    <button id="multiply">Multiply</button>
+    <button id="divide">Divide</button>
+  
+    <div id="answer"></div>
+  </section>
+
+
+  <section>
+    <h2>2. Temperature Converter</h2>
+    <label>Enter Temperature:</label><br>
+    <input type="number" id="tempInput"><br>
+    <button onclick="convertToF()">Convert to Fahrenheit</button>
+    <button onclick="convertToC()">Convert to Celsius</button>
+    <div id="tempResult"></div>
+  </section>
+
+  
+  <section>
+    <h2>3. Difference From 13</h2>
+    <input type="number" id="diffInput" placeholder="Enter a number">
+    <button onclick="diffFrom13()">Calculate</button>
+    <div id="diffResult"></div>
+  </section>
+
+
+  <section>
+    <h2>4. Find Largest of Three</h2>
+    <input type="number" id="num1" placeholder="Number 1"><br>
+    <input type="number" id="num2" placeholder="Number 2"><br>
+    <input type="number" id="num3" placeholder="Number 3"><br>
+    <button onclick="findLargest()">Find Largest</button>
+    <div id="largestResult"></div>
+  </section>
+
+
+  <section>
+    <h2>5. A+ Grade Checker</h2>
+    <label>Total Marks:</label><br>
+    <input type="number" id="marks"><br>
+    <label>Is Final Exam?</label>
+    <input type="checkbox" id="isFinal"><br>
+    <button onclick="checkGrade()">Check Grade</button>
+    <div id="gradeResult"></div>
+  </section>
+
+
+  <script>
+
+    function convertToF() {
+      const c = parseFloat(document.getElementById("tempInput").value);
+      const f = (c * 9/5) + 32;
+      document.getElementById("tempResult").innerHTML = `${c}°C is ${f}°F`;
+    }
+
+
+    function convertToC() {
+      const f = parseFloat(document.getElementById("tempInput").value);
+      const c = (f - 32) * 5/9;
+      document.getElementById("tempResult").innerHTML = `${f}°F is ${c}°C`;
+    }
+
+
+    function diffFrom13() {
+      const num = parseFloat(document.getElementById("diffInput").value);
+      const result = num > 13 ? 2 * Math.abs(num - 13) : Math.abs(num - 13);
+      document.getElementById("diffResult").innerText = `Result: ${result}`;
+    }
+
+
+    function findLargest() {
+      const a = parseFloat(document.getElementById("num1").value);
+      const b = parseFloat(document.getElementById("num2").value);
+      const c = parseFloat(document.getElementById("num3").value);
+      const largest = Math.max(a, b, c);
+      document.getElementById("largestResult").innerText = `Largest number is: ${largest}`;
+    }
+
+
+    function checkGrade() {
+      const marks = parseFloat(document.getElementById("marks").value);
+      const isFinal = document.getElementById("isFinal").checked;
+
+      let gotAPlus = false;
+
+      if (isFinal) {
+        gotAPlus = marks >= 90 && marks <= 100;
+      } else {
+        gotAPlus = marks >= 89 && marks <= 100;
+      }
+
+      document.getElementById("gradeResult").innerText = gotAPlus ? "Result: A+" : "Result: Not A+";
+    }
+  </script>
+
+  <script src="./multiplyOrDivide.js"></script>
+</body>
+</html>
