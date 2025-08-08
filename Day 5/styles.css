@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: #f4f4f4;
+}
+h1 {
+  text-align: center;
+}
+form {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+input, textarea, button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button {
+  background: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background: #218838;
+}
+.post {
+  background: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.post h3 {
+  margin: 0 0 10px;
+}
+.actions {
+  margin-top: 10px;
+}
+.actions button {
+  width: auto;
+  padding: 5px 10px;
+  margin-right: 5px;
+}
+.edit-btn {
+  background: #ffc107;
+  color: black;
+}
+.delete-btn {
+  background: #dc3545;
+  color: white;
+}

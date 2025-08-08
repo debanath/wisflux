@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>LocalStorage Blog CRUD</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>Blog CRUD with LocalStorage</h1>
+
+    <form id="blogForm">
+      <input type="hidden" id="postId">
+      <input type="text" id="title" placeholder="Title" required>
+      <textarea id="content" placeholder="Content" required></textarea>
+      <button type="submit">Save Post</button>
+    </form>
+
+    <div id="posts"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
